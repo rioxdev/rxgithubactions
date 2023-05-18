@@ -19,7 +19,7 @@ jobs:
       - name: display-date-mac
         run:  date
   Job4:
-    depends:  [Job1, Jon2, Job3]
+    needs:  [Job1, Jon2, Job3]
     runs-on:  windows-latest
     steps:
       - name: display-date
