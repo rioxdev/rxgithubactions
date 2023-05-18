@@ -11,8 +11,7 @@ jobs:
   Job2:
     runs-on:  windows-latest
     steps:
-      - name: display-date-windows
-        run:  get-date
+      - run:  get-date
   Job3:
     runs-on:  macos-latest
     steps:
