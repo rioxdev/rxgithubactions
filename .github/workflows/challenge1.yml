@@ -1,0 +1,26 @@
+name: Challenge 1
+on:
+  push:
+    branches: main
+jobs:
+  Job1:
+    runs-on:  ubuntu-latest
+    steps:
+      - name:  display-date-ubuntu
+        run:  date
+  Job2:
+    runs-on:  windows-latest
+    steps:
+      - name: display-date-windows
+        run:  get-date
+  Job3:
+    runs-on:  macos-latest
+    steps:
+      - name: display-date-mac
+        run:  date
+  Job4:
+    depends:  [Job1, Jon2, Job3]
+    runs-on:  windows-latest
+    steps:
+      - name: display-date
+        run:  get-date -f "D"
