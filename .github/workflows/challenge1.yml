@@ -12,6 +12,7 @@ jobs:
     runs-on:  windows-latest
     steps:
       - run:  get-date
+      - run:  ls
   Job3:
     runs-on:  macos-latest
     steps:
@@ -22,4 +23,4 @@ jobs:
     runs-on:  windows-latest
     steps:
       - name: display-date
-        run:  get-date -f "D"
+        run:  get-date -f "D"  
