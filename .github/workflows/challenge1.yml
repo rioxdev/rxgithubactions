@@ -11,7 +11,8 @@ jobs:
   Job2:
     runs-on:  windows-latest
     steps:
-      - run:  get-date
+      - name: checkout
+        uses: actions/checkout@v3
       - run:  ls
   Job3:
     runs-on:  macos-latest
